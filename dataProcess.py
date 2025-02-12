@@ -21,7 +21,6 @@ class GenerateCSV(luigi.Task):
         }
         df = pd.DataFrame(data)
 
-        # Save to CSV
         df.to_csv(self.csv_filename, index=False)
         print("generated file")
 
@@ -31,6 +30,7 @@ class LoadToMySQL(luigi.Task):
     Task to read data from a CSV file and insert it into MySQL using SQLAlchemy.
     """
     csv_filename = luigi.Parameter(default="emp.csv")
+    table_name = luigi.Parameter(default="emp")
 
     def requires(self):
         task = GenerateCSV()
@@ -40,7 +40,7 @@ class LoadToMySQL(luigi.Task):
         df = pd.read_csv(self.csv_filename)
         engine = create_engine(DB_URL)
         df.to_sql(name="emp", con=engine, if_exists="append", index=False)
-        print("✅ Data successfully inserted into MySQL!")
+        print("Data successfully inserted into MySQL!")
 
     def output(self):
         return luigi.LocalTarget("loaded file to mysql successfully")
