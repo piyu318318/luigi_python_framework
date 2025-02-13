@@ -1,0 +1,34 @@
+2025-02-13 10:51:00,978 - INFO - logging configured by default settings
+2025-02-13 10:51:01,298 - DEBUG - Checking if LoadToMySQL(csv_filename=emp.csv, table_name=emp) is complete
+2025-02-13 10:51:01,299 - DEBUG - Checking if GenerateCSV(csv_filename=emp.csv) is complete
+2025-02-13 10:51:01,300 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   PENDING
+2025-02-13 10:51:01,300 - INFO - Informed scheduler that task   GenerateCSV_emp_csv_0e90463e50   has status   DONE
+2025-02-13 10:51:01,300 - INFO - Done scheduling tasks
+2025-02-13 10:51:01,301 - INFO - Running Worker with 1 processes
+2025-02-13 10:51:01,363 - DEBUG - Asking scheduler for work...
+2025-02-13 10:51:01,364 - DEBUG - Starting pruning of task graph
+2025-02-13 10:51:01,364 - DEBUG - Done pruning task graph
+2025-02-13 10:51:01,364 - DEBUG - Pending tasks: 1
+2025-02-13 10:51:01,365 - INFO - [pid 3784] Worker Worker(salt=083692439, workers=1, host=piyush, username=dixit, pid=3784) running   LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-13 10:51:01,568 - INFO - [pid 3784] Worker Worker(salt=083692439, workers=1, host=piyush, username=dixit, pid=3784) done      LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-13 10:51:01,570 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-02-13 10:51:01,572 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   DONE
+2025-02-13 10:51:01,573 - DEBUG - Asking scheduler for work...
+2025-02-13 10:51:01,573 - DEBUG - Starting pruning of task graph
+2025-02-13 10:51:01,574 - DEBUG - Done pruning task graph
+2025-02-13 10:51:01,574 - DEBUG - Done
+2025-02-13 10:51:01,575 - DEBUG - There are no more tasks to run at this time
+2025-02-13 10:51:01,575 - INFO - Worker Worker(salt=083692439, workers=1, host=piyush, username=dixit, pid=3784) was stopped. Shutting down Keep-Alive thread
+2025-02-13 10:51:01,579 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 GenerateCSV(csv_filename=emp.csv)
+* 1 ran successfully:
+    - 1 LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+

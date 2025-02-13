@@ -1,9 +1,15 @@
 import luigi
 import pandas as pd
 from sqlalchemy import create_engine
+import logging
 
 DB_URL = "mysql+pymysql://root:root123@localhost/luigi_assignment"
 
+logging.basicConfig(
+    filename="luigi_pipeline.log",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 class GenerateCSV(luigi.Task):
     """
