@@ -28,7 +28,7 @@ class GenerateCSV(luigi.Task):
         df = pd.DataFrame(data)
 
         df.to_csv(self.csv_filename, index=False)
-        print("generated file")
+        print("Generated CSV file:", self.csv_filename)
 
 
 class LoadToMySQL(luigi.Task):
@@ -39,18 +39,21 @@ class LoadToMySQL(luigi.Task):
     table_name = luigi.Parameter(default="emp")
 
     def requires(self):
-        task = GenerateCSV()
-        return task
-
-    def run(self):
-        df = pd.read_csv(self.csv_filename)
-        engine = create_engine(DB_URL)
-        df.to_sql(name="emp", con=engine, if_exists="append", index=False)
-        print("Data successfully inserted into MySQL!")
+        return GenerateCSV()
 
     def output(self):
-        return luigi.LocalTarget("loaded file to mysql successfully")
+        return luigi.LocalTarget("output/load_to_mysql_success.txt")
+
+    def run(self):
+        engine = create_engine(DB_URL)
+        df = pd.read_csv(self.csv_filename)
+
+        df.to_sql(name=self.table_name, con=engine, if_exists="append", index=False)
+        print("Data successfully inserted into MySQL!")
+
+        with self.output().open("w") as f:
+            f.write("Data loaded successfully")
 
 
 if __name__ == "__main__":
-    luigi.run(["LoadToMySQL", "--local-scheduler"])
+    luigi.build([LoadToMySQL()], workers=1, scheduler_host="localhost")

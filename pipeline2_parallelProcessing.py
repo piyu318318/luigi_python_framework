@@ -47,7 +47,7 @@ class MasterTask(luigi.WrapperTask):
         return [TaskA(),TaskB(),TaskC()]
 
 if __name__ == "__main__":
-    luigi.build([MasterTask()],workers =3 , local_scheduler=True)
+    luigi.build([MasterTask()],workers =3 , scheduler_host="localhost")
 
 
 

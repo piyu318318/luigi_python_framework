@@ -32,3 +32,132 @@ This progress looks :) because there were no failed tasks or missing dependencie
 
 ===== Luigi Execution Summary =====
 
+2025-02-14 10:25:17,669 - INFO - logging configured by default settings
+2025-02-14 10:25:18,019 - DEBUG - Checking if LoadToMySQL(csv_filename=emp.csv, table_name=emp) is complete
+2025-02-14 10:25:18,020 - DEBUG - Checking if GenerateCSV(csv_filename=emp.csv) is complete
+2025-02-14 10:25:18,021 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   PENDING
+2025-02-14 10:25:18,022 - INFO - Informed scheduler that task   GenerateCSV_emp_csv_0e90463e50   has status   DONE
+2025-02-14 10:25:18,022 - INFO - Done scheduling tasks
+2025-02-14 10:25:18,022 - INFO - Running Worker with 1 processes
+2025-02-14 10:25:18,022 - DEBUG - Asking scheduler for work...
+2025-02-14 10:25:18,023 - DEBUG - Starting pruning of task graph
+2025-02-14 10:25:18,023 - DEBUG - Done pruning task graph
+2025-02-14 10:25:18,023 - DEBUG - Pending tasks: 1
+2025-02-14 10:25:18,023 - INFO - [pid 7692] Worker Worker(salt=5613753405, workers=1, host=piyush, username=dixit, pid=7692) running   LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-14 10:25:18,613 - INFO - [pid 7692] Worker Worker(salt=5613753405, workers=1, host=piyush, username=dixit, pid=7692) done      LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-14 10:25:18,616 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-02-14 10:25:18,618 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   DONE
+2025-02-14 10:25:18,618 - DEBUG - Asking scheduler for work...
+2025-02-14 10:25:18,619 - DEBUG - Starting pruning of task graph
+2025-02-14 10:25:18,619 - DEBUG - Done pruning task graph
+2025-02-14 10:25:18,619 - DEBUG - Done
+2025-02-14 10:25:18,619 - DEBUG - There are no more tasks to run at this time
+2025-02-14 10:25:18,619 - INFO - Worker Worker(salt=5613753405, workers=1, host=piyush, username=dixit, pid=7692) was stopped. Shutting down Keep-Alive thread
+2025-02-14 10:25:18,622 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 GenerateCSV(csv_filename=emp.csv)
+* 1 ran successfully:
+    - 1 LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2025-02-14 10:25:35,440 - INFO - logging configured by default settings
+2025-02-14 10:25:35,768 - DEBUG - Checking if LoadToMySQL(csv_filename=emp.csv, table_name=emp) is complete
+2025-02-14 10:25:35,770 - DEBUG - Checking if GenerateCSV(csv_filename=emp.csv) is complete
+2025-02-14 10:25:35,770 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   PENDING
+2025-02-14 10:25:35,771 - INFO - Informed scheduler that task   GenerateCSV_emp_csv_0e90463e50   has status   DONE
+2025-02-14 10:25:35,771 - INFO - Done scheduling tasks
+2025-02-14 10:25:35,771 - INFO - Running Worker with 1 processes
+2025-02-14 10:25:35,772 - DEBUG - Asking scheduler for work...
+2025-02-14 10:25:35,772 - DEBUG - Starting pruning of task graph
+2025-02-14 10:25:35,772 - DEBUG - Done pruning task graph
+2025-02-14 10:25:35,772 - DEBUG - Pending tasks: 1
+2025-02-14 10:25:35,772 - INFO - [pid 14840] Worker Worker(salt=3390626840, workers=1, host=piyush, username=dixit, pid=14840) running   LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-14 10:25:35,873 - INFO - [pid 14840] Worker Worker(salt=3390626840, workers=1, host=piyush, username=dixit, pid=14840) done      LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-14 10:25:35,875 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-02-14 10:25:35,877 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   DONE
+2025-02-14 10:25:35,877 - DEBUG - Asking scheduler for work...
+2025-02-14 10:25:35,877 - DEBUG - Starting pruning of task graph
+2025-02-14 10:25:35,878 - DEBUG - Done pruning task graph
+2025-02-14 10:25:35,878 - DEBUG - Done
+2025-02-14 10:25:35,878 - DEBUG - There are no more tasks to run at this time
+2025-02-14 10:25:35,878 - INFO - Worker Worker(salt=3390626840, workers=1, host=piyush, username=dixit, pid=14840) was stopped. Shutting down Keep-Alive thread
+2025-02-14 10:25:35,879 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 GenerateCSV(csv_filename=emp.csv)
+* 1 ran successfully:
+    - 1 LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2025-02-14 10:26:36,101 - INFO - logging configured by default settings
+2025-02-14 10:26:36,111 - INFO - Worker Worker(salt=4954136200, workers=1, host=piyush, username=dixit, pid=2508) was stopped. Shutting down Keep-Alive thread
+2025-02-14 10:27:23,158 - INFO - logging configured by default settings
+2025-02-14 10:27:23,165 - DEBUG - Checking if LoadToMySQL(csv_filename=emp.csv, table_name=emp) is complete
+2025-02-14 10:27:23,166 - DEBUG - Checking if GenerateCSV(csv_filename=emp.csv) is complete
+2025-02-14 10:27:23,169 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   PENDING
+2025-02-14 10:27:23,169 - INFO - Informed scheduler that task   GenerateCSV_emp_csv_0e90463e50   has status   DONE
+2025-02-14 10:27:23,170 - INFO - Done scheduling tasks
+2025-02-14 10:27:23,170 - INFO - Running Worker with 1 processes
+2025-02-14 10:27:23,170 - DEBUG - Asking scheduler for work...
+2025-02-14 10:27:23,170 - DEBUG - Starting pruning of task graph
+2025-02-14 10:27:23,170 - DEBUG - Done pruning task graph
+2025-02-14 10:27:23,170 - DEBUG - Pending tasks: 1
+2025-02-14 10:27:23,170 - INFO - [pid 13344] Worker Worker(salt=6524099410, workers=1, host=piyush, username=dixit, pid=13344) running   LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-14 10:27:23,257 - INFO - [pid 13344] Worker Worker(salt=6524099410, workers=1, host=piyush, username=dixit, pid=13344) done      LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+2025-02-14 10:27:23,259 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-02-14 10:27:23,260 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   DONE
+2025-02-14 10:27:23,260 - DEBUG - Asking scheduler for work...
+2025-02-14 10:27:23,260 - DEBUG - Starting pruning of task graph
+2025-02-14 10:27:23,260 - DEBUG - Done pruning task graph
+2025-02-14 10:27:23,260 - DEBUG - Done
+2025-02-14 10:27:23,261 - DEBUG - There are no more tasks to run at this time
+2025-02-14 10:27:23,261 - INFO - Worker Worker(salt=6524099410, workers=1, host=piyush, username=dixit, pid=13344) was stopped. Shutting down Keep-Alive thread
+2025-02-14 10:27:23,263 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 GenerateCSV(csv_filename=emp.csv)
+* 1 ran successfully:
+    - 1 LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2025-02-14 10:28:20,482 - INFO - logging configured by default settings
+2025-02-14 10:28:20,488 - DEBUG - Checking if LoadToMySQL(csv_filename=emp.csv, table_name=emp) is complete
+2025-02-14 10:28:20,492 - DEBUG - Starting new HTTP connection (1): localhost:8082
+2025-02-14 10:28:20,499 - DEBUG - http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2025-02-14 10:28:20,499 - INFO - Informed scheduler that task   LoadToMySQL_emp_csv_emp_6566f02d49   has status   DONE
+2025-02-14 10:28:20,499 - INFO - Done scheduling tasks
+2025-02-14 10:28:20,499 - INFO - Running Worker with 1 processes
+2025-02-14 10:28:20,502 - DEBUG - http://localhost:8082 "POST /api/add_worker HTTP/1.1" 200 18
+2025-02-14 10:28:20,503 - DEBUG - Asking scheduler for work...
+2025-02-14 10:28:20,506 - DEBUG - http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 154
+2025-02-14 10:28:20,506 - DEBUG - Done
+2025-02-14 10:28:20,507 - DEBUG - There are no more tasks to run at this time
+2025-02-14 10:28:20,507 - INFO - Worker Worker(salt=5695722690, workers=1, host=piyush, username=dixit, pid=14380) was stopped. Shutting down Keep-Alive thread
+2025-02-14 10:28:20,508 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 complete ones were encountered:
+    - 1 LoadToMySQL(csv_filename=emp.csv, table_name=emp)
+
+Did not run any tasks
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
