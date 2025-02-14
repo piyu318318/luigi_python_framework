@@ -1,3 +1,10 @@
+"""
+how to run program
+python -m luigi --module pipeline2_parallelProcessing MasterTask --workers 3 --scheduler-host localhost
+or
+python pipeline2_parallelProcessing.py
+"""
+
 import luigi
 
 
