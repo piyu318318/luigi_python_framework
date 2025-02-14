@@ -1,0 +1,72 @@
+classes 
+
+1.Task
+ask.requires() → Defines dependencies; ensures this task runs only after required tasks complete.
+Task.output() → Specifies the expected output file/database entry, helping Luigi track task completion.
+Task.run() → Contains the actual logic to execute the task (e.g., reading CSV, processing data, writing to MySQL).
+Task.input() → Provides access to the output of the required task(s), allowing the current task to use it as an input.
+Example: If Task B depends on Task A, Task.input() in Task B retrieves the output of Task A.
+
+
+
+import luigi
+class MyTask(luigi.Task):
+    my_param = luigi.Parameter()
+    task_namespace = 'my_namespace'
+
+my_task = MyTask(my_param='hello')
+print(my_task)                      # --> my_namespace.MyTask(my_param=hello)
+
+print(my_task.get_task_namespace()) # --> my_namespace
+print(my_task.get_task_family())    # --> my_namespace.MyTask
+print(my_task.task_id)              # --> my_namespace.MyTask_hello_890907e7ce
+
+print(MyTask.get_task_namespace())  # --> my_namespace
+print(MyTask.get_task_family())     # --> my_namespace.MyTask
+print(MyTask.task_id)               # --> Error!
+
+
+
+
+
+2.luigi.WrapperTask (For grouping multiple tasks)
+A special type of task that doesn’t do any work itself but triggers multiple other tasks.
+Useful for running multiple dependencies at once.
+class ParentTask(luigi.WrapperTask):
+    def requires(self):
+        return [MyTask(), AnotherTask()]
+
+
+
+3.luigi.build (Manually trigger tasks)
+Used for running Luigi tasks programmatically inside scripts.
+if __name__ == "__main__":
+    luigi.build([MyTask()], local_scheduler=True)
+
+
+4.luigi.Parameter
+Used to pass values to tasks at runtime.
+class DynamicTask(luigi.Task):
+    filename = luigi.Parameter()
+
+    def output(self):
+        return luigi.LocalTarget(self.filename)
+
+
+5.luigi.LocalTarget / luigi.FileSystemTarget (For handling input/output)
+LocalTarget: Handles file-based I/O.
+FileSystemTarget: Generic class that can be extended for cloud-based storage like S3 or HDFS.
+class FileTask(luigi.Task):
+    def output(self):
+        return luigi.LocalTarget("output.txt")
+
+    def run(self):
+        with self.output().open('w') as f:
+            f.write("Hello, Luigi!")
+
+
+6.luigi.ExternalTask (Represents external dependencies)
+Used when a task depends on a dataset or file that exists outside Luigi.
+Does not define run() but defines output()
+
+
